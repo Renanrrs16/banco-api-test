@@ -1,17 +1,16 @@
 const request = require('supertest');
 const{expect} = require('chai');
 require('dotenv').config();
+const postLogin = require('../fixture/postLogin.json');
 
 describe('Login Tests', () => {
     describe('POST /login', () => {
         it('Deve retornar 200 com token e estring quando usar credenciais válidas', async() => {
+            const bodyLogin = {...postLogin}
             const resposta = await request(process.env.Base_URL)
                 .post('/login')
                 .set('Content-Type', 'application/json')
-                .send({
-                      'username': 'julio.lima',
-                      'senha': '123456'
-                })
+                .send(bodyLogin)
              
             console.log(resposta.status);
             console.log(resposta.body);
