@@ -1,4 +1,3 @@
-[readme_do_projeto_de_testes.md](https://github.com/user-attachments/files/34175504/readme_do_projeto_de_testes.md)
 # Banco API Test - Automação de Testes REST
 
 ## Objetivo
